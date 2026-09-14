@@ -1,0 +1,120 @@
+Azul;14-septiembre-2026;19:00;Algo nublado;15 km;12.2;No se calcula; 56;Noroeste  13;999 / 
+ Bahía Blanca;14-septiembre-2026;19:00;Algo nublado;15 km;13.4;No se calcula; 54;Noroeste  11;1003.3 / 
+ Benito Juárez;14-septiembre-2026;15:00;Algo nublado;15 km;13.9;No se calcula; 46;Norte  33;991.2 / 
+ Bolívar;14-septiembre-2026;18:00;Parcialmente nublado;15 km;15;No se calcula; 48;Noroeste  18;1006.2 / 
+ Campo de Mayo;14-septiembre-2026;19:00;Algo nublado;10 km;11.9;No se calcula; 65;Norte  1;1016 / 
+ Coronel Suarez;14-septiembre-2026;15:00;Parcialmente nublado;15 km;15;No se calcula; 41;Norte  24;988.6 / 
+ Dolores;14-septiembre-2026;18:00;Algo nublado;10 km;12.6;No se calcula; 54;Noroeste  11;1016.6 / 
+ El Palomar;14-septiembre-2026;19:00;Algo nublado;10 km;13.3;No se calcula; 47;Norte  3;1017.2 / 
+ Ezeiza;14-septiembre-2026;19:00;Parcialmente nublado;10 km;13.8;No se calcula; 43;Noroeste  5;1016.4 / 
+ Junín;14-septiembre-2026;19:00;Parcialmente nublado;12 km;14.4;No se calcula; 58;Noroeste  1;1008.4 / 
+ La Plata;14-septiembre-2026;19:00;Algo nublado;10 km;10.9;No se calcula; 52;Norte  3;1016.8 / 
+ Las Flores;14-septiembre-2026;18:00;Parcialmente nublado;15 km;14.5;No se calcula; 55;Oeste  11;1013.2 / 
+ Mar del Plata;14-septiembre-2026;19:00;Algo nublado;10 km;11.5;No se calcula; 60;Noroeste  20;1012.8 / 
+ Mariano Moreno;14-septiembre-2026;19:00;Parcialmente nublado;10 km;12.6;No se calcula; 51;Noroeste  5;1014.8 / 
+ Merlo;14-septiembre-2026;19:00;Algo nublado;10 km;13;No se calcula; 45;Norte  3;1017.3 / 
+ Morón;14-septiembre-2026;19:00;Algo nublado;10 km;13;No se calcula; 45;Oeste  11;1016 / 
+ Nueve de Julio;14-septiembre-2026;18:00;Cubierto;15 km;14.9;No se calcula; 54;Noroeste  9;1009.2 / 
+ Olavarría;14-septiembre-2026;15:00;Despejado;15 km;12.8;No se calcula; 45;Oeste  25;999.7 / 
+ Pehuajó;14-septiembre-2026;18:00;Parcialmente nublado;15 km;16.1;No se calcula; 51;Noroeste  9;1006.6 / 
+ Pigué;14-septiembre-2026;15:00;Algo nublado;20 km;15.3;No se calcula; 37;Noroeste  24;979.4 / 
+ Punta Indio B.A.;14-septiembre-2026;19:00;Algo nublado;10 km;9;7.3; 74;Noreste  11;1016.3 / 
+ San Fernando;14-septiembre-2026;19:00;Parcialmente nublado;10 km;12.6;No se calcula; 48;Norte  7;1017.7 / 
+ Tandil;14-septiembre-2026;19:00;Parcialmente nublado;20 km;12.6;No se calcula; 51;Noroeste  18;995.3 / 
+ Trenque Lauquen;14-septiembre-2026;18:00;Algo nublado;15 km;18.4;No se calcula; 37;Noroeste  11;1005 / 
+ Tres Arroyos;14-septiembre-2026;18:00;Despejado;15 km;15.6;No se calcula; 54;Oeste  20;1000.4 / 
+ Villa Gesell;14-septiembre-2026;19:00;Algo nublado;10 km;10.1;No se calcula; 49;Oeste  9;1016 / 
+ Aeroparque Buenos Aires;14-septiembre-2026;19:00;Parcialmente nublado;10 km;13.7;No se calcula; 52;Norte  11;1018 / 
+ Buenos Aires;14-septiembre-2026;19:00;Algo nublado;10 km;13.8;No se calcula; 51;Norte  9;1015.7 / 
+ Catamarca;14-septiembre-2026;19:00;Algo nublado;20 km;15.4;No se calcula; 47;Sur  11;964.1 / 
+ Tinogasta;14-septiembre-2026;18:00;Algo nublado;20 km;18.2;No se calcula; 34;Este  33;880.1 / 
+ Pcia. Roque Saenz Peña;14-septiembre-2026;19:00;Despejado;20 km;19;No se calcula; 46;Sur  5;1006.4 / 
+ Resistencia;14-septiembre-2026;19:00;Despejado;15 km;16.9;No se calcula; 57;Sur  7;1011.6 / 
+ Comodoro Rivadavia;14-septiembre-2026;19:00;Cubierto con lluvia;15 km;5.7;0.9; 67;Sur  31;1016 / 
+ Esquel;14-septiembre-2026;19:00;Algo nublado;30 km;10.8;No se calcula; 44;Sur  14;925.6 / 
+ Paso De Indios;14-septiembre-2026;18:00;Parcialmente nublado;45 km;14.9;No se calcula; 35;Sur  29;957.6 / 
+ Puerto Madryn;14-septiembre-2026;19:00;Parcialmente nublado con lluvia;30 km;11.2;No se calcula; 55;Sudeste  29;997.8 / 
+ Trelew;14-septiembre-2026;19:00;Parcialmente nublado con chaparrón de lluvia;20 km;9.6;5.6; 69;Sur  37;1009.7 / 
+ Córdoba;14-septiembre-2026;19:00;Algo nublado;12 km;13.4;No se calcula; 65;Norte  7;959.8 / 
+ Córdoba Observatorio;14-septiembre-2026;19:00;Algo nublado;10 km;15.1;No se calcula; 65;Este  7;968 / 
+ Esc. Aviación Militar;14-septiembre-2026;19:00;Algo nublado;10 km;14.5;No se calcula; 67;Este  7;960 / 
+ Laboulaye;14-septiembre-2026;19:00;Despejado;15 km;13.9;No se calcula; 60;Norte  3;1003 / 
+ Marcos Juárez;14-septiembre-2026;19:00;Algo nublado;20 km;15.1;No se calcula; 61;Noroeste  5;1004.9 / 
+ Pilar Obs.;14-septiembre-2026;19:00;Despejado;10 km;14;No se calcula; 61;Norte  14;978.4 / 
+ Río Cuarto;14-septiembre-2026;19:00;Algo nublado;15 km;14;No se calcula; 59;Norte  9;967.7 / 
+ Villa Dolores;14-septiembre-2026;19:00;Despejado;30 km;13.9;No se calcula; 59;Noroeste  5;952.6 / 
+ Villa María Del Río Seco;14-septiembre-2026;15:00;Cubierto;10 km;12;No se calcula; 70;Norte  3;981 / 
+ Corrientes;14-septiembre-2026;19:00;Despejado;10 km;17.6;No se calcula; 49;Sur  9;1010.4 / 
+ Ituzaingó;14-septiembre-2026;18:00;Despejado;15 km;19.2;No se calcula; 55;Sudeste  16;1007.8 / 
+ Mercedes;14-septiembre-2026;18:00;Algo nublado con humo;12 km;18.4;No se calcula; 48;Este  5;1006.1 / 
+ Monte Caseros;14-septiembre-2026;19:00;Algo nublado;20 km;15.2;No se calcula; 53;Sudoeste  11;1013.4 / 
+ Paso De Los Libres;14-septiembre-2026;19:00;Despejado con humo;8 km;15.5;No se calcula; 60;Sur  7;1011.3 / 
+ Concordia;14-septiembre-2026;19:00;Despejado;15 km;12.3;No se calcula; 66;Calma;1015.7 / 
+ Gualeguaychú;14-septiembre-2026;19:00;Algo nublado;15 km;14.2;No se calcula; 55;Noreste  9;1016.8 / 
+ Paraná;14-septiembre-2026;19:00;Despejado;15 km;15.4;No se calcula; 57;Noroeste  9;1010.2 / 
+ Formosa;14-septiembre-2026;19:00;Despejado;20 km;18.1;No se calcula; 55;Sur  7;1009.8 / 
+ Las Lomitas;14-septiembre-2026;18:00;Despejado;20 km;23.2;No se calcula; 30;Sudeste  3;1000.6 / 
+ Mount Pleasant Airport (Islas Malvinas);14-septiembre-2026;18:00;Cubierto;35 km;0;-6.4; 66;Sur  29;1000.6 / 
+ La Quiaca;14-septiembre-2026;19:00;Despejado;30 km;16.6;No se calcula; 9;Sudoeste  24;670.2 / 
+ Jujuy;14-septiembre-2026;19:00;Cubierto;12 km;10.4;No se calcula; 80;Noreste  9;913.7 / 
+ Jujuy Universidad Nacional;14-septiembre-2026;19:00;Cubierto con neblina;9 km;8.6;No se calcula; 87;Sur  3;870.5 / 
+ General Pico;14-septiembre-2026;19:00;Despejado;20 km;17.1;No se calcula; 37;Norte  9;997.8 / 
+ Victorica;14-septiembre-2026;15:00;Algo nublado;40 km;19.8;No se calcula; 29;Norte  9;978.8 / 
+ Santa Rosa;14-septiembre-2026;19:00;Despejado;30 km;17.8;No se calcula; 41;Noroeste  3;991.4 / 
+ Chamical;14-septiembre-2026;18:00;Parcialmente nublado;20 km;14.7;No se calcula; 54;Este  9;964.9 / 
+ Chepes;14-septiembre-2026;15:00;Parcialmente nublado;15 km;17.2;No se calcula; 46;Noreste  3;943.4 / 
+ Chilecito;14-septiembre-2026;09:00;Cubierto con niebla;1.0 km;4.3;No se calcula; 97;Calma;914.6 / 
+ La Rioja;14-septiembre-2026;19:00;Despejado;20 km;14.9;No se calcula; 55;Calma;968.4 / 
+ Malargue;14-septiembre-2026;19:00;Despejado;20 km;16.6;No se calcula; 23;Oeste  16;859.3 / 
+ Mendoza;14-septiembre-2026;18:00;Algo nublado;15 km;18;No se calcula; 30;Noreste  11;936.2 / 
+ Mendoza Observatorio;14-septiembre-2026;19:00;Despejado;15 km;15.3;No se calcula; 49;Calma;922.6 / 
+ San Martín (Mza);14-septiembre-2026;19:00;Despejado;15 km;17.3;No se calcula; 33;Norte  7;941.6 / 
+ San Rafael;14-septiembre-2026;19:00;Despejado;20 km;19.3;No se calcula; 23;Este  14;929.8 / 
+ Uspallata;14-septiembre-2026;18:00;Despejado;15 km;19.2;No se calcula; 27;Calma;811.8 / 
+ Bernardo De Irigoyen;14-septiembre-2026;18:00;Nublado con precipitación a la vista;10 km;16.3;No se calcula; 86;Sur  3;923.4 / 
+ Iguazú;14-septiembre-2026;19:00;Parcialmente nublado;20 km;19.4;No se calcula; 77;Noreste  5;984.5 / 
+ Oberá;14-septiembre-2026;15:00;Despejado;20 km;21.2;No se calcula; 80;Norte  3;979.6 / 
+ Posadas;14-septiembre-2026;19:00;Algo nublado;20 km;19.3;No se calcula; 53;Sur  9;1002 / 
+ Chapelco;14-septiembre-2026;15:00;Algo nublado;15 km;18.8;No se calcula; 15;Oeste  33;925.6 / 
+ Neuquén;14-septiembre-2026;19:00;Despejado;15 km;23;No se calcula; 12;Sudoeste  13;980.9 / 
+ Bariloche;14-septiembre-2026;19:00;Parcialmente nublado;10 km;11.5;No se calcula; 42;Oeste  20;922 / 
+ Cipolletti;14-septiembre-2026;15:00;Despejado;25 km;21.2;No se calcula; 18;Sudoeste  7;983.2 / 
+ El Bolsón;14-septiembre-2026;18:00;Algo nublado;30 km;17.1;No se calcula; 31;Sur  18;980.5 / 
+ Maquinchao;14-septiembre-2026;19:00;Parcialmente nublado;40 km;13.8;No se calcula; 29;Sudoeste  14;913.7 / 
+ San Antonio Oeste;14-septiembre-2026;15:00;Algo nublado;30 km;21.2;No se calcula; 20;Norte  14;1010.2 / 
+ Viedma;14-septiembre-2026;19:00;Algo nublado;30 km;14.6;No se calcula; 49;Sudoeste  3;1011.3 / 
+ Metán;14-septiembre-2026;15:00;Cubierto con precipitación a la vista;4.0 km;8.2;No se calcula; 92;Este  3;920.7 / 
+ Orán;14-septiembre-2026;18:00;Cubierto;10 km;15.4;No se calcula; 59;Sudeste  9;975 / 
+ Rivadavia;14-septiembre-2026;15:00;Cubierto;20 km;18;No se calcula; 58;Calma;993.2 / 
+ Salta;14-septiembre-2026;19:00;Cubierto con precipitación a la vista;9 km;9;6.7; 81;Noreste  14;879.5 / 
+ Tartagal;14-septiembre-2026;18:00;Nublado;10 km;13.6;No se calcula; 72;Noreste  9;964.8 / 
+ Jachal;14-septiembre-2026;18:00;Despejado;15 km;16.1;No se calcula; 32;Sudeste  9;885.7 / 
+ San Juan;14-septiembre-2026;19:00;Despejado;15 km;17.1;No se calcula; 35;Sur  5;948.6 / 
+ San Luis;14-septiembre-2026;19:00;Despejado;20 km;14.1;No se calcula; 47;Noroeste  13;936.1 / 
+ Santa Rosa del Conlara;14-septiembre-2026;19:00;Despejado;20 km;13.3;No se calcula; 64;Calma;946.4 / 
+ Villa Reynolds;14-septiembre-2026;19:00;Despejado;10 km;17.2;No se calcula; 35;Oeste  13;961 / 
+ El Calafate;14-septiembre-2026;19:00;Algo nublado;30 km;4.6;1.6; 41;Noroeste  13;999.8 / 
+ Gobernador Gregores;14-septiembre-2026;15:00;Nublado con nevada;30 km;1;-6.5; 84;Sur  46;977.1 / 
+ Perito Moreno;14-septiembre-2026;19:00;Parcialmente nublado;50 km;3.5;-2.9; 57;Este  42;971.2 / 
+ Puerto Deseado;14-septiembre-2026;15:00;Nublado con lluvia;25 km;5;-1.0; 71;Sur  44;1003.4 / 
+ Río Gallegos;14-septiembre-2026;19:00;Parcialmente nublado;30 km;4.4;1.1; 56;Sudoeste  14;1020 / 
+ San Julián;14-septiembre-2026;15:00;Nublado;30 km;3.6;-3.1; 51;Sur  48;1012.8 / 
+ Santa Cruz;14-septiembre-2026;15:00;Nublado;30 km;3;-3.8; 53;Sur  46;1006.4 / 
+ Ceres;14-septiembre-2026;19:00;Algo nublado;15 km;16.8;No se calcula; 59;Calma;1008.9 / 
+ Rafaela;14-septiembre-2026;15:00;Cubierto;10 km;16.6;No se calcula; 55;Noroeste  14;1009.1 / 
+ Reconquista;14-septiembre-2026;19:00;Despejado con humo;10 km;16.8;No se calcula; 55;Este  11;1013 / 
+ Rosario;14-septiembre-2026;19:00;Parcialmente nublado;15 km;13.8;No se calcula; 59;Norte  7;1015.6 / 
+ Santa Fe;14-septiembre-2026;19:00;Despejado;12 km;17.1;No se calcula; 51;Noreste  9;1017.3 / 
+ Sunchales;14-septiembre-2026;19:00;Algo nublado;15 km;15.6;No se calcula; 60;Noroeste  3;1007.9 / 
+ Venado Tuerto;14-septiembre-2026;19:00;Cubierto;10 km;16;No se calcula; 53;Oeste  7;1004.4 / 
+ Termas de Rio Hondo;14-septiembre-2026;19:00;Cubierto con llovizna en la hora anterior;10 km;10.4;No se calcula; 87;Sur  9;987.7 / 
+ Santiago del Estero;14-septiembre-2026;19:00;Cubierto;10 km;11.7;No se calcula; 85;Sudoeste  7;997.3 / 
+ Río Grande B.A.;14-septiembre-2026;19:00;Algo nublado;30 km;2.8;-1.2; 71;Oeste  16;1016.2 / 
+ Ushuaia;14-septiembre-2026;19:00;Cubierto;30 km;2.3;-4.6; 75;Sudoeste  44;1012.5 / 
+ Tucumán;14-septiembre-2026;19:00;Cubierto con llovizna;4.0 km;8.5;7.0; 97;Sudoeste  9;968.2 / 
+ Base Belgrano II;14-septiembre-2026;18:00;Algo nublado con ventisca baja;3.0 km;-31.2;---; 25;Sudeste  63;924.5 / 
+ Base Esperanza;14-septiembre-2026;18:00;Parcialmente nublado;10 km;-4.1;-7.3; 84;Noreste  7;988.6 / 
+ Base Carlini;14-septiembre-2026;18:00;Nublado;10 km;-3.2;-11.0; 90;Oeste  33;993.2 / 
+ Base Marambio;14-septiembre-2026;18:00;Parcialmente nublado;15 km;-7.8;-15.5; 56;Sur  22;964.6 / 
+ Base Orcadas;14-septiembre-2026;18:00;Cubierto con nevada;2.0 km;-6;-13.5; 83;Noroeste  24;986.5 / 
+ Base San Martín;14-septiembre-2026;18:00;Cubierto con nevada en la hora anterior;8 km;-16.1;-28.2; 81;Norte  35;994.5 / 
