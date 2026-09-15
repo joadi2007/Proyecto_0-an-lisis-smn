@@ -73,7 +73,37 @@ def cant_ciudades_comp(observaciones: dict) -> int:
             completas += 1
     return completas
 
+def temp_max(observaciones: dict) -> list:
+    temp = []
+    for datos in observaciones.values():
+        if datos['temperatura'] is not None:
+            temp.append(datos['temperatura'])
+    temp_max = max(temp)
+
+    ciudades = []
+    for ciudad, datos in observaciones.items():
+        if datos['temperatura'] == temp_max:
+            ciudades.append(ciudad)
+    return ciudades
+
+def temp_min(observaciones: dict) -> list:
+    temp = []
+    for datos in observaciones.values():
+        if datos['temperatura'] is not None:
+            temp.append(datos['temperatura'])
+    temp_min = min(temp)
+
+    ciudades = []
+    for ciudad, datos in observaciones.items():
+        if datos['temperatura'] == temp_min:
+            ciudades.append(ciudad)
+
+    return ciudades   
+
+
 if __name__ == "__main__":
     resultado = leer_observaciones("datos/estado_tiempo.txt")
     print(cantidad_ciudades(resultado))
     print(cant_ciudades_comp(resultado))
+    print(temp_max(resultado))
+    print(temp_min(resultado))
