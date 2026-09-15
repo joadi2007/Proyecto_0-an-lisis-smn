@@ -32,14 +32,19 @@ def leer_observaciones(ruta: str) -> dict:
             try:
                 presion = float(campos[9].strip())
             except ValueError:
-                presion = None                
+                presion = None
+
+            try:
+                temperatura = float(campos[5])
+            except ValueError:
+                temperatura = None                                
 
             datos_ciudad = {
                 "fecha": campos[1],
                 "hora": campos[2],
                 "condicion": campos[3],
                 "visibilidad": campos[4],
-                "temperatura": float(campos[5]),
+                "temperatura": temperatura,
                 "sensacion_termica": sensacion_termica,
                 "humedad": campos[7].strip(),
                 "direccion_viento": direccion_viento,
