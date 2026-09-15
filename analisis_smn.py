@@ -13,46 +13,51 @@ def leer_observaciones(ruta: str) -> dict:
     observaciones = {}
     lineas_invalidas = 0
 
-    with open(ruta, 'r', encoding='latin-1') as archivo:
-        for linea in archivo:
-            campos = linea.strip().split(";")
+    try:
+        with open(ruta, 'r', encoding='latin-1') as archivo:
+            for linea in archivo:
+                campos = linea.strip().split(";")
 
-            if len(campos) != 10:
-                lineas_invalidas += 1
-                continue
+                if len(campos) != 10:
+                    lineas_invalidas += 1
+                    continue
 
-            ciudad = campos[0].strip()
-            direccion_viento, velocidad_viento = separar_viento(campos[8])
+                ciudad = campos[0].strip()
+                direccion_viento, velocidad_viento = separar_viento(campos[8])
 
-            try:
-                sensacion_termica = float(campos[6])
-            except ValueError:
-                sensacion_termica = None
+                try:
+                    sensacion_termica = float(campos[6])
+                except ValueError:
+                    sensacion_termica = None
 
-            try:
-                presion = float(campos[9].strip().split()[0])
-            except ValueError:
-                presion = None
+                try:
+                    presion = float(campos[9].strip().split()[0])
+                except ValueError:
+                    presion = None
 
-            try:
-                temperatura = float(campos[5])
-            except ValueError:
-                temperatura = None
+                try:
+                    temperatura = float(campos[5])
+                except ValueError:
+                    temperatura = None
 
-            datos_ciudad = {
-                "fecha": campos[1],
-                "hora": campos[2],
-                "condicion": campos[3],
-                "visibilidad": campos[4],
-                "temperatura": temperatura,
-                "sensacion_termica": sensacion_termica,
-                "humedad": campos[7].strip(),
-                "direccion_viento": direccion_viento,
-                "velocidad_viento": velocidad_viento,
-                "presion": presion,
-            }
+                datos_ciudad = {
+                    "fecha": campos[1],
+                    "hora": campos[2],
+                    "condicion": campos[3],
+                    "visibilidad": campos[4],
+                    "temperatura": temperatura,
+                    "sensacion_termica": sensacion_termica,
+                    "humedad": campos[7].strip(),
+                    "direccion_viento": direccion_viento,
+                    "velocidad_viento": velocidad_viento,
+                    "presion": presion,
+                }
 
-            observaciones[ciudad] = datos_ciudad
+                observaciones[ciudad] = datos_ciudad
+
+    except FileNotFoundError:
+        print(f"Error: no se encontró el archivo '{ruta}'")
+        return observaciones
 
     print(f"Líneas inválidas encontradas: {lineas_invalidas}")
     return observaciones
