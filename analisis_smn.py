@@ -30,14 +30,14 @@ def leer_observaciones(ruta: str) -> dict:
                 sensacion_termica = None
 
             try:
-                presion = float(campos[9].strip())
+                presion = float(campos[9].strip().split()[0])
             except ValueError:
                 presion = None
 
             try:
                 temperatura = float(campos[5])
             except ValueError:
-                temperatura = None                                
+                temperatura = None
 
             datos_ciudad = {
                 "fecha": campos[1],
@@ -49,7 +49,7 @@ def leer_observaciones(ruta: str) -> dict:
                 "humedad": campos[7].strip(),
                 "direccion_viento": direccion_viento,
                 "velocidad_viento": velocidad_viento,
-                "presion": presion, 
+                "presion": presion,
             }
 
             observaciones[ciudad] = datos_ciudad
@@ -57,6 +57,18 @@ def leer_observaciones(ruta: str) -> dict:
     print(f"Líneas inválidas encontradas: {lineas_invalidas}")
     return observaciones
 
+def cantidad_ciudades(observaciones: dict) -> int:
+    return len(observaciones)
+
+def cant_ciudades_comp(observaciones: dict) -> int:
+    completas = 0
+    for datos in observaciones.values():
+        falta = any(valor is None for valor in datos.values())
+        if not falta:
+            completas += 1
+    return completas
+
 if __name__ == "__main__":
     resultado = leer_observaciones("datos/estado_tiempo.txt")
-    print(resultado["Azul"])
+    print(cantidad_ciudades(resultado))
+    print(cant_ciudades_comp(resultado))
