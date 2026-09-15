@@ -11,10 +11,15 @@ def separar_viento(campo_viento: str) -> tuple:
 
 def leer_observaciones(ruta: str) -> dict:
     observaciones = {}
+    lineas_invalidas = 0
 
     with open(ruta, 'r', encoding='latin-1') as archivo:
         for linea in archivo:
             campos = linea.strip().split(";")
+
+            if len(campos) != 10:
+                lineas_invalidas += 1
+                continue
 
             ciudad = campos[0].strip()
             direccion_viento, velocidad_viento = separar_viento(campos[8])
@@ -23,6 +28,11 @@ def leer_observaciones(ruta: str) -> dict:
                 sensacion_termica = float(campos[6])
             except ValueError:
                 sensacion_termica = None
+
+            try:
+                presion = float(campos[9].strip())
+            except ValueError:
+                presion = None                
 
             datos_ciudad = {
                 "fecha": campos[1],
@@ -34,10 +44,12 @@ def leer_observaciones(ruta: str) -> dict:
                 "humedad": campos[7].strip(),
                 "direccion_viento": direccion_viento,
                 "velocidad_viento": velocidad_viento,
-                "presion": campos[9].strip(), 
+                "presion": presion, 
             }
 
             observaciones[ciudad] = datos_ciudad
+
+    print(f"Líneas inválidas encontradas: {lineas_invalidas}")
     return observaciones
 
 if __name__ == "__main__":
