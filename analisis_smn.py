@@ -116,6 +116,31 @@ def temp_min(observaciones: dict) -> list:
 
     return ciudades   
 
+def viento_max(observaciones: dict) -> list:
+    viento = []
+    for datos in observaciones.values():
+        if datos['velocidad_viento'] is not None:
+            viento.append(datos['velocidad_viento'])
+    viento_max = max(viento)
+
+    ciudades = []
+    for ciudad, datos in observaciones.items():
+        if datos['velocidad_viento'] == viento_max:
+            ciudades.append(ciudad)
+    return ciudades
+
+def viento_min(observaciones: dict) -> list:
+    viento = []
+    for datos in observaciones.values():
+        if datos['velocidad_viento'] is not None:
+            viento.append(datos['velocidad_viento'])
+    viento_min = min(viento)
+
+    ciudades = []
+    for ciudad, datos in observaciones.items():
+        if datos['velocidad_viento'] == viento_min:
+            ciudades.append(ciudad)
+    return ciudades
 
 if __name__ == "__main__":
     resultado = leer_observaciones("datos/estado_tiempo.txt")
@@ -123,6 +148,7 @@ if __name__ == "__main__":
     print(cant_ciudades_comp(resultado))
     print(temp_max(resultado))
     print(temp_min(resultado))
+    print(viento_max(resultado))
+    print(viento_min(resultado))
 
-    print(resultado["Azul"]["fecha_hora"])
-    print(type(resultado["Azul"]["fecha_hora"]))
+
