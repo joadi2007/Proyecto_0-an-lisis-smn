@@ -1,3 +1,11 @@
+from datetime import datetime
+
+MESES_ESP = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, 
+    "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11,
+    "diciembre": 12
+    }
+
 def separar_viento(campo_viento: str) -> tuple:
     partes = campo_viento.split()
     if len(partes) == 1:
@@ -26,6 +34,13 @@ def leer_observaciones(ruta: str) -> dict:
                 direccion_viento, velocidad_viento = separar_viento(campos[8])
 
                 try:
+                    dia, mes_texto, año = campos[1].split("-")
+                    hora, minuto = campos[2].split(":")
+                    fecha_hora = datetime(int(año), MESES_ESP[mes_texto], int(dia), int(hora), int(minuto))
+                except (ValueError, KeyError):
+                    fecha_hora = None
+
+                try:
                     sensacion_termica = float(campos[6])
                 except ValueError:
                     sensacion_termica = None
@@ -51,6 +66,7 @@ def leer_observaciones(ruta: str) -> dict:
                     "direccion_viento": direccion_viento,
                     "velocidad_viento": velocidad_viento,
                     "presion": presion,
+                    "fecha_hora": fecha_hora
                 }
 
                 observaciones[ciudad] = datos_ciudad
@@ -107,3 +123,6 @@ if __name__ == "__main__":
     print(cant_ciudades_comp(resultado))
     print(temp_max(resultado))
     print(temp_min(resultado))
+
+    print(resultado["Azul"]["fecha_hora"])
+    print(type(resultado["Azul"]["fecha_hora"]))
