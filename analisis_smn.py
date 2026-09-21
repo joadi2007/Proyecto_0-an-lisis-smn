@@ -19,7 +19,7 @@ def separar_viento(campo_viento: str) -> tuple:
 
 def leer_observaciones(ruta: str) -> dict:
     observaciones = {}
-    lineas_invalidas = 0
+    lineas_invalidas = []
 
     try:
         with open(ruta, 'r', encoding='latin-1') as archivo:
@@ -27,7 +27,7 @@ def leer_observaciones(ruta: str) -> dict:
                 campos = linea.strip().split(";")
 
                 if len(campos) != 10:
-                    lineas_invalidas += 1
+                    lineas_invalidas.append(len(campos))
                     continue
 
                 ciudad = campos[0].strip()
@@ -73,10 +73,9 @@ def leer_observaciones(ruta: str) -> dict:
 
     except FileNotFoundError:
         print(f"Error: no se encontró el archivo '{ruta}'")
-        return observaciones
+        return observaciones, lineas_invalidas
 
-    print(f"Líneas inválidas encontradas: {lineas_invalidas}")
-    return observaciones
+    return observaciones, lineas_invalidas
 
 def cantidad_ciudades(observaciones: dict) -> int:
     return len(observaciones)
@@ -121,7 +120,7 @@ def faltantes_por_campo(observaciones: dict) -> dict:
     return resultado
 
 if __name__ == "__main__":
-    resultado = leer_observaciones("datos/estado_tiempo.txt")
+    resultado, lineas_invalidas = leer_observaciones("datos/estado_tiempo.txt")
     print(cantidad_ciudades(resultado))
     print(cant_ciudades_comp(resultado))
 
@@ -129,5 +128,5 @@ if __name__ == "__main__":
     print(top_n_ciudades(resultado, "temperatura", 5, descendente=False))
     print(top_n_ciudades(resultado, "velocidad_viento", 5))
     print(top_n_ciudades(resultado, "velocidad_viento", 5, descendente=False))
-    print(faltantes_por_campo(resultado)["sensacion_termica"])
 
+    print(lineas_invalidas)
