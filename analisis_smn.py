@@ -101,6 +101,24 @@ def top_n_ciudades(observaciones: dict, campo: str, n: int, descendente: bool = 
     ciudades = [ciudad for ciudad, valor in top]
     return ciudades
 
+def faltantes_por_campo(observaciones: dict) -> dict:
+    if not observaciones:
+        return {}
+
+    primera_ciudad = next(iter(observaciones.values()))
+    campos = list(primera_ciudad.keys())
+
+    resultado ={}
+    for campo in campos:
+        ciudades_con_faltante =[]
+        for ciudad, datos in observaciones.items():
+            if datos[campo] is None:
+                ciudades_con_faltante.append(ciudad)
+        resultado[campo] = {
+            "cantidad": len(ciudades_con_faltante),
+            "ciudades": ciudades_con_faltante
+        }
+    return resultado
 
 if __name__ == "__main__":
     resultado = leer_observaciones("datos/estado_tiempo.txt")
@@ -111,5 +129,5 @@ if __name__ == "__main__":
     print(top_n_ciudades(resultado, "temperatura", 5, descendente=False))
     print(top_n_ciudades(resultado, "velocidad_viento", 5))
     print(top_n_ciudades(resultado, "velocidad_viento", 5, descendente=False))
-
+    print(faltantes_por_campo(resultado)["sensacion_termica"])
 
