@@ -89,66 +89,27 @@ def cant_ciudades_comp(observaciones: dict) -> int:
             completas += 1
     return completas
 
-def temp_max(observaciones: dict) -> list:
-    temp = []
-    for datos in observaciones.values():
-        if datos['temperatura'] is not None:
-            temp.append(datos['temperatura'])
-    temp_max = max(temp)
-
-    ciudades = []
+def top_n_ciudades(observaciones: dict, campo: str, n: int, descendente: bool = True) -> list:
+    pares = []
     for ciudad, datos in observaciones.items():
-        if datos['temperatura'] == temp_max:
-            ciudades.append(ciudad)
+        if datos[campo] is not None:
+            pares.append((ciudad, datos[campo]))
+    pares_ordenados = sorted(pares, key = lambda par: par[1], reverse= descendente)
+
+    top = pares_ordenados[:n]
+
+    ciudades = [ciudad for ciudad, valor in top]
     return ciudades
 
-def temp_min(observaciones: dict) -> list:
-    temp = []
-    for datos in observaciones.values():
-        if datos['temperatura'] is not None:
-            temp.append(datos['temperatura'])
-    temp_min = min(temp)
-
-    ciudades = []
-    for ciudad, datos in observaciones.items():
-        if datos['temperatura'] == temp_min:
-            ciudades.append(ciudad)
-
-    return ciudades   
-
-def viento_max(observaciones: dict) -> list:
-    viento = []
-    for datos in observaciones.values():
-        if datos['velocidad_viento'] is not None:
-            viento.append(datos['velocidad_viento'])
-    viento_max = max(viento)
-
-    ciudades = []
-    for ciudad, datos in observaciones.items():
-        if datos['velocidad_viento'] == viento_max:
-            ciudades.append(ciudad)
-    return ciudades
-
-def viento_min(observaciones: dict) -> list:
-    viento = []
-    for datos in observaciones.values():
-        if datos['velocidad_viento'] is not None:
-            viento.append(datos['velocidad_viento'])
-    viento_min = min(viento)
-
-    ciudades = []
-    for ciudad, datos in observaciones.items():
-        if datos['velocidad_viento'] == viento_min:
-            ciudades.append(ciudad)
-    return ciudades
 
 if __name__ == "__main__":
     resultado = leer_observaciones("datos/estado_tiempo.txt")
     print(cantidad_ciudades(resultado))
     print(cant_ciudades_comp(resultado))
-    print(temp_max(resultado))
-    print(temp_min(resultado))
-    print(viento_max(resultado))
-    print(viento_min(resultado))
+
+    print(top_n_ciudades(resultado, "temperatura", 5))
+    print(top_n_ciudades(resultado, "temperatura", 5, descendente=False))
+    print(top_n_ciudades(resultado, "velocidad_viento", 5))
+    print(top_n_ciudades(resultado, "velocidad_viento", 5, descendente=False))
 
 
