@@ -6,6 +6,13 @@ MESES_ESP = {
     "diciembre": 12
     }
 
+import json
+
+def guardar_json(observaciones: dict, ruta_salida: str) -> None:
+    """Guarda el diccionario de observaciones en un archivo JSON."""
+    with open(ruta_salida, "w", encoding="utf-8") as archivo:
+        json.dump(observaciones, archivo, ensure_ascii=False, indent=2, default=str)
+
 def separar_viento(campo_viento: str) -> tuple:
     partes = campo_viento.split()
     if len(partes) == 1:
@@ -151,3 +158,4 @@ def mostrar_resumen(observaciones: dict, lineas_invalidas: list) -> None:
 if __name__ == "__main__":
     resultado, lineas_invalidas = leer_observaciones("datos/estado_tiempo.txt")
     mostrar_resumen(resultado, lineas_invalidas)
+    guardar_json(resultado, "datos/observaciones.json")
