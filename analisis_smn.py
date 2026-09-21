@@ -119,14 +119,35 @@ def faltantes_por_campo(observaciones: dict) -> dict:
         }
     return resultado
 
+def mostrar_resumen(observaciones: dict, lineas_invalidas: list) -> None:
+    print('=' * 40)
+    print('RESUMEN DE OBSERVACIONES SMN')
+    print('=' * 40)
+
+    print(f"Ciudades leídas: {cantidad_ciudades(observaciones)}")
+    print(f"Ciudades con datos completos: {cant_ciudades_comp(observaciones)}")   
+
+    print(f"Líneas inválidas: {len(lineas_invalidas)}")
+    if lineas_invalidas:
+        print(f"  (cantidad de campos encontrados en cada una: {lineas_invalidas})")
+
+    print("Datos faltantes por campo:")
+    faltantes = faltantes_por_campo(observaciones)
+    for campo, info in faltantes.items():
+        print(f"  {campo}: {info['cantidad']} faltantes")
+
+    print("Extremos:")
+    print(f"  Ciudad más cálida: {top_n_ciudades(observaciones, 'temperatura', 1)}")
+    print(f"  Ciudad más fría: {top_n_ciudades(observaciones, 'temperatura', 1, descendente=False)}")
+    print(f"  Ciudad con más viento: {top_n_ciudades(observaciones, 'velocidad_viento', 1)}")
+    print(f"  Ciudad con menos viento: {top_n_ciudades(observaciones, 'velocidad_viento', 1, descendente=False)}")
+
+    print("Top 5 rankings:")
+    print(f"  Más cálidas: {top_n_ciudades(observaciones, 'temperatura', 5)}")
+    print(f"  Más frías: {top_n_ciudades(observaciones, 'temperatura', 5, descendente=False)}")
+    print(f"  Más viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5)}")
+    print(f"  Menos viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5, descendente=False)}")
+
 if __name__ == "__main__":
     resultado, lineas_invalidas = leer_observaciones("datos/estado_tiempo.txt")
-    print(cantidad_ciudades(resultado))
-    print(cant_ciudades_comp(resultado))
-
-    print(top_n_ciudades(resultado, "temperatura", 5))
-    print(top_n_ciudades(resultado, "temperatura", 5, descendente=False))
-    print(top_n_ciudades(resultado, "velocidad_viento", 5))
-    print(top_n_ciudades(resultado, "velocidad_viento", 5, descendente=False))
-
-    print(lineas_invalidas)
+    mostrar_resumen(resultado, lineas_invalidas)
