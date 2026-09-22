@@ -99,12 +99,16 @@ def top_n_ciudades(observaciones: dict, campo: str, n: int, descendente: bool = 
     pares = []
     for ciudad, datos in observaciones.items():
         if datos[campo] is not None:
-            pares.append((ciudad, datos[campo]))
-    pares_ordenados = sorted(pares, key = lambda par: par[1], reverse= descendente)
+            pares.append((datos[campo], ciudad))
 
-    top = pares_ordenados[:n]
+    pares.sort(reverse=descendente)
 
-    ciudades = [ciudad for ciudad, valor in top]
+    top = pares[:n]
+
+    ciudades = []
+    for valor, ciudad in top:
+        ciudades.append(ciudad)
+
     return ciudades
 
 def faltantes_por_campo(observaciones: dict) -> dict:
