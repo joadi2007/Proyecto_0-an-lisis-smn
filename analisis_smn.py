@@ -51,9 +51,9 @@ def leer_observaciones(ruta: str) -> dict:
                 try:
                     dia, mes_texto, año = campos[1].split("-")
                     hora, minuto = campos[2].split(":")
-                    fecha_hora = datetime(int(año), MESES_ESP[mes_texto], int(dia), int(hora), int(minuto))
+                    fecha_y_hora = datetime(int(año), MESES_ESP[mes_texto], int(dia), int(hora), int(minuto))
                 except (ValueError, KeyError):
-                    fecha_hora = None
+                    fecha_y_hora = None
 
                 # Sensación térmica: puede venir como "No se calcula" u otro texto no numérico
                 try:
@@ -83,7 +83,7 @@ def leer_observaciones(ruta: str) -> dict:
                     "direccion_viento": direccion_viento,
                     "velocidad_viento": velocidad_viento,
                     "presion": presion,
-                    "fecha_hora": fecha_hora
+                    "fecha_y_hora": fecha_y_hora
                 }
 
                 observaciones[ciudad] = datos_ciudad
@@ -95,6 +95,13 @@ def leer_observaciones(ruta: str) -> dict:
 
     return observaciones, lineas_invalidas
 
+def horarios_reportados(observaciones: dict) -> list:
+    # devuelve la lista de horarios que las estaciones reportaron la observación
+    horarios = set()
+    for datos in observaciones.values():
+        if datos['fecha_y_hora'] is not None:
+            horarios.add(datos['fecha_y_hora'].strftime("%H:%M"))
+    return sorted(horarios)
 
 def cantidad_ciudades(observaciones: dict) -> int:
     # Cantidad de claves (ciudades) en el diccionario
@@ -181,6 +188,9 @@ def mostrar_resumen(observaciones: dict, lineas_invalidas: list) -> None:
     print(f"  Más frías: {top_n_ciudades(observaciones, 'temperatura', 5, descendente=False)}")
     print(f"  Más viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5)}")
     print(f"  Menos viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5, descendente=False)}")
+
+    # imprime los horarios en la que estacion reporto la observación
+    print(f"Horarios reportados: {horarios_reportados(observaciones)}")
 
 
 if __name__ == "__main__":
