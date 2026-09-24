@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+import sys
 
 # Mapea nombres de mes en español (como vienen en el archivo del SMN) a su número
 MESES_ESP = {
@@ -95,13 +96,17 @@ def leer_observaciones(ruta: str) -> dict:
 
     return observaciones, lineas_invalidas
 
+
 def horarios_reportados(observaciones: dict) -> list:
-    # devuelve la lista de horarios que las estaciones reportaron la observación
+    """Devuelve una lista de los horarios a los que las estaciones reportaron
+    la observación, en formato 'HH:MM', sin repetir y ordenados de menor a mayor."""
     horarios = set()
     for datos in observaciones.values():
-        if datos['fecha_y_hora'] is not None:
-            horarios.add(datos['fecha_y_hora'].strftime("%H:%M"))
+        if datos["fecha_y_hora"] is not None:
+            horarios.add(datos["fecha_y_hora"].strftime("%H:%M"))
+
     return sorted(horarios)
+
 
 def cantidad_ciudades(observaciones: dict) -> int:
     # Cantidad de claves (ciudades) en el diccionario
@@ -170,6 +175,8 @@ def mostrar_resumen(observaciones: dict, lineas_invalidas: list) -> None:
     if lineas_invalidas:
         print(f"  (cantidad de campos encontrados en cada una: {lineas_invalidas})")
 
+    print(f"Horarios reportados: {horarios_reportados(observaciones)}")
+
     print("Datos faltantes por campo:")
     faltantes = faltantes_por_campo(observaciones)
     for campo, info in faltantes.items():
@@ -189,11 +196,12 @@ def mostrar_resumen(observaciones: dict, lineas_invalidas: list) -> None:
     print(f"  Más viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5)}")
     print(f"  Menos viento: {top_n_ciudades(observaciones, 'velocidad_viento', 5, descendente=False)}")
 
-    # imprime los horarios en la que estacion reporto la observación
-    print(f"Horarios reportados: {horarios_reportados(observaciones)}")
-
 
 if __name__ == "__main__":
-    resultado, lineas_invalidas = leer_observaciones("datos/estado_tiempo.txt")
-    mostrar_resumen(resultado, lineas_invalidas)
-    guardar_json(resultado, "datos/observaciones.json")
+    if len(sys.argv) < 2:
+        print("Uso: python analisis_smn.py <ruta_al_archivo>")
+    else:
+        ruta = sys.argv[1]
+        resultado, lineas_invalidas = leer_observaciones(ruta)
+        mostrar_resumen(resultado, lineas_invalidas)
+        guardar_json(resultado, "datos/observaciones.json")
