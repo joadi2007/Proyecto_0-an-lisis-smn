@@ -16,7 +16,7 @@ trabajos prácticos.
 ## Cómo ejecutarlo
 
 ```bash
-python analisis_smn.py
+python analisis_smn.py datos/estado_tiempo.txt
 ```
 
 El programa lee por defecto `datos/estado_tiempo.txt`. Al finalizar, muestra
